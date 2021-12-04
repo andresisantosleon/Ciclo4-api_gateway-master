@@ -1,0 +1,20 @@
+mutation SignUpUser($userInput: SignUpInput!) {
+    signUpUser(userInput: $userInput) {
+      refresh
+      access
+    }
+  }
+
+
+  {
+    "userInput": {
+      "username": "prueba2",
+      "password": "89456",
+      "name": "prueba",
+      "email": "kkkp@hotmail.com",
+      "balance": 0
+    }
+  }
+  
+  
+  https://studio.apollographql.com/sandbox/explorer?endpoint=http%3A%2F%2Flocalhost%3A4000%2Fsrc%2Findex.js%3A24&explorerURLState=N4IgJg9gxgrgtgUwHYBcQC4RxighigSwiQAIBlAgcyQFUAHGgZwQCcAKAEhmZYEkk6OdOSq06-QSgCEAShLAAOqRKNR9JqzbdWEoSS49dKOYuUkSLBADNLjABZLz53FCgJGjRyQC%2BS30hAAGhAAN1wWAlwAIwAbdwwQU3MFEG0%2BARwU4SSnFLSkXEQskhS6FhgEKNwAJhTAr2SQOlwPAHcIFjBilIAOAE4AFgBWADY6hpKQAqKMSbKKqvGzSYQ4XAIY7pAAa126AAE7CBQ1jYA6KAg4JadJqpjcJDdigAYvf28QbyA
