@@ -6,6 +6,7 @@ const resolvers = require('./resolvers');
 const AccountAPI = require('./dataSources/account_api');
 const AuthAPI = require('./dataSources/auth_api');
 const MateriasPrimas=require('./dataSources/materiasPrimas_api');
+const Proveedores=require('./dataSources/proveedores_api');
 
 const server = new ApolloServer({
 
@@ -16,6 +17,7 @@ const server = new ApolloServer({
         accountAPI: new AccountAPI(),
         authAPI: new AuthAPI(),
         materiasPrimas: new MateriasPrimas(),
+        proveedores: new Proveedores(),
     }),    
     introspection: true,
     playground: true

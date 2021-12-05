@@ -10,7 +10,12 @@ class MateriasPrimas extends RESTDataSource {
 
     async getAllMP() { //Metodo para obtener todas las materias primas 
         return await this.get('/all');
-    }   
+    }
+    
+    async createMP(materiaPrima){
+        materiaPrima=new Object(JSON.parse(JSON.stringify(materiaPrima)));
+        return await this.post('/save', materiaPrima);
+    }
 }
 
 module.exports = MateriasPrimas;
