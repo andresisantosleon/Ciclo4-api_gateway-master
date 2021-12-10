@@ -3,7 +3,6 @@ const { ApolloServer } = require('apollo-server'); //Preguntar como se hace Debu
 const authentication = require('./utils/authentication');
 const typeDefs = require('./typeDefs');
 const resolvers = require('./resolvers');
-const AccountAPI = require('./dataSources/account_api');
 const AuthAPI = require('./dataSources/auth_api');
 const MateriasPrimas=require('./dataSources/materiasPrimas_api');
 const Proveedores=require('./dataSources/proveedores_api');
@@ -14,7 +13,6 @@ const server = new ApolloServer({
     typeDefs,
     resolvers,
     dataSources: () => ({
-        accountAPI: new AccountAPI(),
         authAPI: new AuthAPI(),
         materiasPrimas: new MateriasPrimas(),
         proveedores: new Proveedores(),
