@@ -10,6 +10,12 @@ const materiasPrimasResolver = {
         }
     },
 
+    // Query: {
+    //     getAllMateriasPrimas: (_, { userId }, { dataSources}) => {        //Preguntar la razon para 
+    //             return dataSources.materiasPrimas.getAllMP();           
+    //     }
+    // },
+
     Mutation:{
         crearMateriaPrima: async (_, {userId, materiaPrima}, { dataSources, userIdToken })=>{
             if(userIdToken==userId){

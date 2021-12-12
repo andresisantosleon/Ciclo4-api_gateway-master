@@ -13,13 +13,7 @@ const authResolver = {
 
         signUpUser: async (_, { userInput }, { dataSources }) => { //Preguntar por el primer argumento vacio
             //Preguntar el por que del uso del async await en la mutation, la mutation no se ejecutan en seri?
-            const accountInput = {
-                username: userInput.username,
-                balance: userInput.balance,
-                lastChange: (new Date()).toISOString()
-            }
-
-            await dataSources.accountAPI.createAccount(accountInput);
+                       
 
             const authInput = {
                 username: userInput.username,
